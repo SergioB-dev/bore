@@ -61,7 +61,7 @@ impl Client {
             None => bail!("unexpected EOF"),
         };
         info!(remote_port, "connected to server");
-        info!("listening at {to}:{remote_port}");
+        info!("localhost:{local_port} -> listening at {to}:{remote_port}");
 
         Ok(Client {
             conn: Some(stream),
